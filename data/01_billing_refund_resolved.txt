@@ -1,0 +1,14 @@
+Subject: Double charge on my March invoice
+From: Priya Raman <priya.raman@example.com>
+Phone: +1-555-0142
+Date: 2026-03-14
+
+Hello Billing Team,
+
+I was charged twice for my Brightlane Premium Membership renewal on 2 March 2026. Both charges of $49.00 appear on my card statement. Please fix this as soon as possible.
+
+Regards,
+Priya Raman
+
+--- Internal note (Billing Support, 2026-03-15) ---
+Duplicate charge confirmed. Refund of $49.00 was processed on 15 March 2026 and the customer was notified by email. Case closed.

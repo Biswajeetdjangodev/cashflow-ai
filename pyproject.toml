@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "caseflow-ai"
+version = "1.0.0"
+description = "CaseFlow AI - batch AI processing of customer complaint documents (extraction, email drafts, management summaries)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    # Versions validated together on 2026-09-30 (see README > Dependencies).
+    "openai>=3.22.1,<4",
+    "pydantic>=2.13,<3",
+    "python-dotenv>=1.2,<2",
+    "pypdf>=6.19,<7",
+    "python-docx>=1.2,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.1,<10",
+    # Only needed to generate the sample/fixture PDFs.
+    "reportlab>=5.0,<6",
+]
+
+[project.scripts]
+caseflow = "caseflow.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "real_provider: opt-in smoke test that makes a paid OpenAI API call",
+]
